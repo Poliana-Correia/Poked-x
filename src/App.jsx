@@ -8,33 +8,30 @@ import React, { useState } from 'react';
 // isLoading: estado responsável pelo carregamento.
 
 const App = () => {
-    // const [pokemon, setPokemon] = useState(null);
-    // const [error, setError] = useState(null);
-    // const [typedPokemon, setTypedPokemon] = useState('');
-    // const [isLoading, setLoading] = useState(false);
+    const [pokemon, setPokemon] = useState(null);
+    const [error, setError] = useState(null);
+    const [typedPokemon, setTypedPokemon] = useState('');
+    const [isLoading, setLoading] = useState(false);
 
-    // // elemento de input
-    // const handleChange = (event) => {
-    //     setTypedPokemon(event.target.value);
-    // };
+    // elemento de input
+    const handleChange = (event) => {
+        setTypedPokemon(event.target.value);
+    };
 
     return (
-        <div>
-            <h1>heloo world</h1>
-        </div>
-        // <div className='App'>
-        //     <h1>Welcome to Pokedéx!</h1>
-        //     <p>Enter a pokemon's name or id to get started!</p>
-        //     <form onSubmit = {handleSubmit}></form>
-        //         <input 
-        //             value = {typedPokemon}
-        //             placeholder = "pokemon name/id"
-        //             onChange = {handleChange}
-        //         />
-        //         <button type = "submit">
+        <div className='App'>
+            <h1>Welcome to Pokedéx!</h1>
+            <p>Enter a pokemon's name or id to get started!</p>
+            <form onSubmit = {handleSubmit}></form>
+                <input 
+                    value = {typedPokemon}
+                    placeholder = "pokemon name/id"
+                    onChange = {handleChange}
+                />
+                <button type = "submit">
                      
-        //         </button>
-        // </div>
+                </button>
+        </div>
     );
 };
 
